@@ -1,0 +1,15 @@
+joints: {
+    shoulder_pan_joint: {id: 1, neutral: 330.0, max_angle: 360.0, min_angle: -360.0, max_speed: 120},
+    shoulder_lift_joint: {id: 2, neutral: 330.0, max_angle: 360.0, min_angle: -360.0, max_speed: 120},
+    elbow_joint: {id: 3, neutral: 150.0, max_angle: 180.0, min_angle: -180.0, max_speed: 180},
+    wrist_1_joint: {id: 4, neutral: 56.0, max_angle: 180.0, min_angle: -180.0, max_speed: 180},
+    wrist_2_joint: {id: 5, neutral: 56.0, max_angle: 360.0, min_angle: -360.0, max_speed: 180},
+    wrist_3_joint: {id: 6, neutral: 56.0, max_angle: 360.0, min_angle: -360.0, max_speed: 180},
+    finger_joint: {id: 7},
+}
+controllers: {
+    arm_controller: {type: follow_controller, joints: [shoulder_pan_joint, shoulder_lift_joint, elbow_joint, wrist_1_joint, wrist_2_joint, wrist_3_joint], action_name: scaled_pos_joint_traj_controller/follow_joint_trajectory, onboard: False }
+}
+
+
+# finger_joint: {id: 7, neutral: 50.0, max_angle: 80.0, min_angle: 0.0, max_speed: 2},
